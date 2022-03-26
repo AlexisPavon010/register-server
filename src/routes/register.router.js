@@ -8,7 +8,7 @@ import { updateRegister } from "../controllers/updateRegister.js";
 
 
 const router = Router();
-
+router.get("/", (req, res) => res.status(200).json({ ok: true }));
 router.get("/getRegisters", getRegisters);
 router.get("/getRegisterById/:_id", getRegisterById);
 router.post("/createRegister", createRegister);
