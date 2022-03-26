@@ -1,5 +1,6 @@
 import registerModel from "../models/registerModel.js";
 
+
 export const createRegister = async (req, res) => {
   try {
     const register = await registerModel(req.body)

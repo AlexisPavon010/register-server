@@ -7,4 +7,4 @@ const RegisterModel = new mongoose.Schema({
     description: { type: String, }
 })
 
-export default mongoose.model('Registros', RegisterModel)
+export default mongoose.model('Registros', RegisterModel) || mongoose.model.Registros;
