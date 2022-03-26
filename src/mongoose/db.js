@@ -1,11 +1,10 @@
 import mongoose from 'mongoose';
-import dotenv from 'dotenv';
-dotenv.config()
+import { DATABASE_URL } from '../config.js';
 
 const db = async () => {
   try {
     // Use new db connection
-    await mongoose.connect(process.env.DATABASE_URL, {
+    await mongoose.connect(DATABASE_URL, {
       useUnifiedTopology: true,
       // useFindAndModify: true,
       // useCreateIndex: true,
