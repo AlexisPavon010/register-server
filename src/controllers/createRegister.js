@@ -1,8 +1,10 @@
+import RegisterModel from "../models/RegisterModel.js";
+
 
 export const createRegister = async (req, res) => {
   try {
-    // const register = await registerModel(req.body)
-    // await register.save()
+    const register = await RegisterModel(req.body)
+    await register.save()
     res.status(200).json({ok: true});
   } catch (error) {
     console.log(error)

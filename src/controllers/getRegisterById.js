@@ -1,9 +1,9 @@
-import registerModel from "../models/registerModel.js";
+import RegisterModel from "../models/RegisterModel.js";
 
 export const getRegisterById = async (req, res) => {
   const { _id } = req.params;
   try {
-    const data = await registerModel.findById(_id)
+    const data = await RegisterModel.findById(_id)
     res.status(200).json(data);
   } catch (error) {
     console.log(error)
