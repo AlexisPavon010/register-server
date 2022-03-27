@@ -20,7 +20,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(cors());
 // app.use( getAuthorization);
-app.use('/', (req, res)=> {
+app.get('/', (req, res)=> {
     res.status(200).json({ok: true})
 });
 
