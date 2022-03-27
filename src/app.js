@@ -1,8 +1,8 @@
 import express from "express";
 import cors from "cors";
 
-// import "./mongoose/db.js";
-// import registerRoutes from "./routes/register.router.js";
+import "./mongoose/db.js";
+import registerRoutes from "./routes/register.router.js";
 // import { getAuthorization } from "./middelwares/getAuthorization.js";
 
 // import morgan from "morgan";
