@@ -1,10 +1,11 @@
-import app from "./app.js";
-import { PORT } from "./config.js";
-import express from "express";
-import cors from "cors";
+// import app from "./app.js";
+// import { PORT } from "./config.js";
+// import express from "express";
+const express = require('express');
+// import cors from "cors";
 
-import "./mongoose/db.js";
-import registerRoutes from "./routes/register.router.js";
+// import "./mongoose/db.js";
+// import registerRoutes from "./routes/register.router.js";
 // import { getAuthorization } from "./middelwares/getAuthorization.js";
 
 // import morgan from "morgan";
@@ -22,11 +23,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(cors());
 // app.use( getAuthorization);
-app.get('/', (req, res)=> {
-    res.status(200).json({ok: true})
-});
+app.get('/', (req, res) => res.send('Home Page Route'));
 
-app.use('/api', registerRoutes);
+// app.use('/api', registerRoutes);
 
 // app.use(authRoutes);
 // app.use(tasksRoutes);
