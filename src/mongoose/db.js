@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 import { DATABASE_URL } from '../config.js';
 
-const db = async () => {
+const ConnectDb = async () => {
   try {
     // Use new db connection
     await mongoose.connect(DATABASE_URL, {
@@ -18,5 +18,4 @@ const db = async () => {
     console.log(error)
   }
 };
-
-db()
+ConnectDb()

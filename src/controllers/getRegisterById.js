@@ -1,5 +1,6 @@
 import RegisterModel from "../models/RegisterModel.js";
 
+
 export const getRegisterById = async (req, res) => {
   const { _id } = req.params;
   try {
